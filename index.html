@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Colin Desmarais</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+
+  <style>
+    /* Never let anything overflow the screen horizontally */
+    html, body { overflow-x: hidden; }
+    img { max-width: 100%; height: auto; }
+
+    /* Long links, titles and the email address wrap instead of overflowing */
+    .container { overflow-wrap: break-word; word-wrap: break-word; }
+
+    /* Section spacing (replaces the old fixed vh heights) */
+    .section { margin-bottom: 40px; }
+
+    /* About text */
+    .about-text { margin-top: 3%; text-align: justify; }
+
+    /* Sidebar */
+    .profile-pic { width: 250px; max-width: 100%; height: auto; }
+    .name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    /* Publication lists: spacing between entries (replaces <br> between items) */
+    .pubs li { margin-bottom: 1.2em; }
+
+    /* Teaching: semester heading with indented course lines */
+    .semester { margin-bottom: 1em; }
+    .semester .course { padding-left: 40px; }
+
+    /* Phones and small tablets */
+    @media (max-width: 991px) {
+      .about-text { text-align: left; }
+      .section { margin-bottom: 30px; }
+
+      /* On small screens: profile photo + name first, then main photo and
+         about text, then contact details */
+      .top-row { display: flex; flex-direction: column; }
+      .sidebar { display: contents; }
+      .top-row .sidebar-pic,
+      .top-row .sidebar-contact,
+      .top-row .main-col { padding-left: 15px; padding-right: 15px; }
+      .sidebar-pic { order: 1; text-align: center; }
+      .main-col { order: 2; }
+      .sidebar-contact { order: 3; text-align: center; margin-top: 20px; }
+      .profile-pic { margin: 0 auto; display: block; }
+    }
+
+    @media (max-width: 480px) {
+      .name { font-size: 26px; }
+      h2 { font-size: 26px; }
+      .semester .course { padding-left: 20px; }
+      .pubs { padding-left: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">About me</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="Scientific_CV.pdf">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- About + sidebar -->
+  <div class="row section top-row">
+
+    <!-- Main column -->
+    <div class="col-md-8 main-col">
+
+      <!-- Main Image -->
+      <img class="img-responsive" src="photo.gif" alt="">
+
+      <div class="about-text">
+        <h2 id="about">About me</h2>
+
+        <p>I am currently a PostDoc at the Faculty of Mathematics at University of Vienna, working with Prof. <a href="https://homepage.univie.ac.at/emmanuel.schertzer/">Emmanuel Schertzer</a>.
+          I am a member of the <a href="https://biomathematics.univie.ac.at/">Biomathematics Group</a>, and a member of the research network <a href="https://sfbrandom.univie.ac.at/">Discrete random structures: enumeration and scaling limits</a>.</p>
+
+        <p>Previously I was a PostDoc at the Institute of Discrete Mathematics and Geometry at TU Wien with Prof. <a href="https://www.dmg.tuwien.ac.at/stufler/">Benedikt Stufler</a>, working on limits of random networks.</p>
+
+        <p>I completed my PhD under the supervision of Cecilia Holmgren and Svante Janson at Uppsala University, my doctoral thesis is titled <a href="https://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1656796&amp;dswid=1764">Decorating trees grown in urns.</a></p>
+
+        <p>My masters studies were completed at the University of Manitoba under the supervision of David S. Gunderson, my masters thesis is titled <a href="https://mspace.lib.umanitoba.ca/server/api/core/bitstreams/84c0e01c-16e6-432b-a3a7-65347aa28af7/content">On partition regular systems.</a></p>
+
+        <p>My research interests lie primarily in probability, with a particular focus on random trees and random tree-like networks. I also work in biomathematics with a focus on population
+          genetics, and in combinatorics with a focus on graph theory.</p>
+      </div>
+    </div>
+
+    <!-- Contact info sidebar -->
+    <div class="col-md-4 sidebar">
+      <div class="sidebar-pic">
+        <img class="profile-pic" src="WebsitePic.jpg" alt="Colin Desmarais" width="250" height="320">
+        <div class="name">Colin Desmarais</div>
+      </div>
+
+      <div class="sidebar-contact">
+        <p><b>colin(dot)desmarais(at)univie.ac.at</b></p>
+        <p>Faculty of Mathematics<br>
+          University of Vienna<br>
+          Vienna, Austria<br>
+          <a href="https://scholar.google.com/citations?user=TFs_Sr8AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publications -->
+  <div class="row section">
+    <div class="col-md-10">
+      <h2 id="publications">Research</h2>
+
+      <strong>Preprints</strong>
+      <ul class="pubs">
+        <li class="paper"><a href="https://arxiv.org/pdf/2603.17804">
+          Moments of Pólya urns balanced in expectation, </a><a href="https://arxiv.org/abs/2603.17804">arXiv:2603.17804</a>, (submitted).</li>
+        <li class="paper"><a href="https://arxiv.org/pdf/2509.26254">
+          K-branching random walk with noisy selection: large population limits and phase transitions, </a>with Emmanuel Schertzer and Zsofia Talyigas,
+          <a href="https://arxiv.org/abs/2509.26254">arXiv:2509.26254</a>, (submitted).</li>
+      </ul>
+
+      <strong>Journal Publications</strong>
+      <ul class="pubs">
+        <li class="paper"><a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3077DCD1D9E3657C49D81B105D03B3D3/S0021900224000329a.pdf/depths-in-random-recursive-metric-spaces.pdf">
+          Depths in random recursive metric spaces,</a> <em>Journal of Applied Probability</em> <b>61</b> (2024), 1448-1462.</li>
+        <li class="paper"><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/rsa.21142">
+          Broadcasting-induced colorings of preferential attachment trees, </a>with Cecilia Holmgren and Stephan Wagner, <em>Random Structures and Algorithms</em> <b>63</b> (2023), 363-405.</li>
+        <li class="paper"><a href="depths-in-hooking-networks.pdf">Depths in hooking networks, </a>with Hosam Mahmoud,
+          <em>Probability in the Engineering and Informational Sciences</em> <b>36</b> (2022), 941-949.</li>
+        <li class="paper"><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v27i2p45/pdf">
+          Normal Limit Laws for Vertex Degrees in Randomly Grown Hooking Networks and Bipolar Networks, </a>with Cecilia Holmgren, <em>Electronic Journal of Combinatorics</em> <b>27</b> (2020), P2.45.</li>
+        <li class="paper"><a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/18122F6FCCA7945CB6C633799474A78F/S0008439500022086a.pdf/testing-bi-orderability-of-knot-groups.pdf">
+          Testing bi-orderability of knot groups, </a>with Adam Clay and Patrick Naylor, <em>Canadian Mathematical Bulletin</em> <b>59</b> (2016), 472-482.</li>
+      </ul>
+
+      <strong>Conference Proceedings</strong>
+      <ul class="pubs">
+        <li class="paper"><a href="https://journals.muni.cz/eurocomb/article/view/35581">
+          The root cluster after percolation on preferential attachment trees, </a>with Cecilia Holmgren and Stephan Wagner, <em>in Proceedings of the 12th European Conference on Combinatorics, Graph Theory and Applications (EUROCOMB’23),</em> 343-348, MUNI Journals, 2023.</li>
+        <li class="paper"><a href="https://www.epj-conferences.org/articles/epjconf/pdf/2021/05/epjconf_chep2021_02054.pdf">
+          Distributed training and scalability for the particle clustering method UCluster, </a>with Olga Sunneborn Gudnadottir, Daniel Gedon, Karl Bengtsson Bernander, Raazesh Sainudiin, and Rebeca Gonzalez Suarez, <em>in EPJ Web of Conferences (CHEP 2021)</em> <b>251</b> article 02054, EDP Sciences, 2021.</li>
+        <li class="paper"><a href="DegreeDistributionsHooking.pdf">
+          Degree distributions of generalized hooking networks, </a>with Cecilia Holmgren, <em>in 2019 Proceedings of the Sixteenth Workshop on Analytic Algorithms and Combinatorics (ANALCO)</em> 103-110, SIAM, 2019.</li>
+      </ul>
+
+      <strong>Posters</strong><br>
+      The following are posters of my research from my bachelors and masters.
+      <ul class="pubs">
+        <li class="paper"><a href="K3(22t)_poster.pdf">
+          Constructions of hypergraphs free of certain 3-uniform 3-partite hypergraphs, </a>with David S. Gunderson, 2016.</li>
+        <li class="paper"><a href="Knot_poster.pdf">
+          Testing bi-orderability of knot groups, </a>with Adam Clay and Patrick Naylor, undergraduate summer research project 2014.</li>
+        <li class="paper"><a href="Math_Poster.pdf">
+          Negacyclic weighing matrices, </a>with Robert Craigen and Patrick Naylor, undergraduate summer research project 2013.</li>
+      </ul>
+
+      <strong>Miscellaneous</strong>
+      <ul class="pubs">
+        <li class="paper"><a href="https://adamjclay.github.io/Brute_force[5].pdf">
+          Non-bi-orderability of knot groups from Dehn's presentation,</a> with Adam Clay, part of undergraduate research project 2015.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Teaching -->
+  <div class="row section">
+    <div class="col-md-10">
+      <h2 id="teaching">Teaching</h2>
+
+      <h4>TU Wien</h4>
+      <div class="semester">
+        <strong>Winter Semester 2025</strong>
+        <div class="course">Analysis for Computer Science I 104.634 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Winter Semester 2024</strong>
+        <div class="course">Discrete Mathematics for Computer Scientists 104.272 (Masters level) (TA)</div>
+      </div>
+
+      <h4>University of Vienna</h4>
+      <div class="semester">
+        <strong>Summer Semester 2024</strong>
+        <div class="course">Linear Algebra II 250083 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Summer Semester 2023</strong>
+        <div class="course">Analysis I 250011 (TA)</div>
+      </div>
+
+      <h4>Uppsala University</h4>
+      <div class="semester">
+        <strong>Spring Semester 2022</strong>
+        <div class="course">Combinatorics 1MA020 (Lecturer)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2021</strong>
+        <div class="course">Several Variable Calculus 1MA017 (TA)</div>
+        <div class="course">Transform Methods 1MA034 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Spring Semester 2021</strong>
+        <div class="course">Combinatorics 1MA020 (Lecturer)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2020</strong>
+        <div class="course">Linear Algebra II 1MA024 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Spring Semester 2020</strong>
+        <div class="course">Combinatorics 1MA020 (Lecturer)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2019</strong>
+        <div class="course">Linear Algebra II 1MA024 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Spring Semester 2019</strong>
+        <div class="course">Linear Algebra and Geometry I 1MA025 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2018</strong>
+        <div class="course">Transform Methods 1MA034 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2017</strong>
+        <div class="course">Several Variable Calculus 1MA016 (TA)</div>
+      </div>
+
+      <h4>University of Manitoba</h4>
+      <div class="semester">
+        <strong>Winter Semester 2017</strong>
+        <div class="course">Elements of Discrete Mathematics MATH 1240 (TA)</div>
+        <div class="course">Techniques of Classical and Linear Algebra MATH 1210 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2016</strong>
+        <div class="course">Elements of Discrete Mathematics MATH 1240 (TA)</div>
+        <div class="course">Techniques of Classical and Linear Algebra MATH 1210 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Summer Semester 2016</strong>
+        <div class="course">Elements of Discrete Mathematics MATH 1240 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Winter Semester 2016</strong>
+        <div class="course">Elements of Discrete Mathematics MATH 1240 (TA)</div>
+        <div class="course">Graph Theory I MATH 2070 (TA)</div>
+      </div>
+      <div class="semester">
+        <strong>Fall Semester 2015</strong>
+        <div class="course">Elements of Discrete Mathematics MATH 1240 (TA)</div>
+        <div class="course">Techniques of Classical and Linear Algebra MATH 1210 (TA)</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Other people may like it too! -->
+<div class="container clearfix" style="padding-bottom: 15px;">
+  <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
+</div>
+
+</body>
+
+</html>
